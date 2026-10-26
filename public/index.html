@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Internship Connect</h1>
+    <p>Find your next opportunity and apply online.</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Available Internships</h2>
+      <p id="loading" role="status">Loading internships...</p>
+      <p id="error" class="error" role="alert" hidden></p>
+      <p id="empty" hidden>No internships available right now.</p>
+      <div id="internship-list" class="internship-list"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Apply for an Internship</h2>
+      <p id="selected-message">Select an internship below or enter its ID.</p>
+
+      <form id="application-form">
+        <label for="internship_id">Internship ID</label>
+        <input id="internship_id" name="internship_id"
+               type="number" min="1" step="1" required>
+
+        <label for="applicant_name">Full Name</label>
+        <input id="applicant_name" name="applicant_name"
+               type="text" minlength="2" maxlength="100" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="phone">10-digit Phone Number</label>
+        <input id="phone" name="phone" type="tel"
+               pattern="[0-9]{10}" maxlength="10" required>
+
+        <label for="resume_link">Resume URL</label>
+        <input id="resume_link" name="resume_link"
+               type="url" placeholder="https://example.com/resume"
+               required>
+
+        <button id="submit-button" type="submit">
+          Submit Application
+        </button>
+        <p id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Internship Connect | Student Project</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

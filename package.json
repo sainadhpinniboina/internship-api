@@ -1,6 +1,17 @@
 {
+  "name": "internship-api",
+  "version": "1.0.0",
+  "description": "Secure Internship Application API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
   "dependencies": {
     "better-sqlite3": "^13.0.3",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0"
   }
 }

@@ -1,7 +1,11 @@
-CREATE TABLE IF NOT EXISTS internships (
+CREATE TABLE IF NOT EXISTS applications (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  title TEXT NOT NULL,
-  company TEXT NOT NULL,
-  location TEXT NOT NULL,
-  type TEXT NOT NULL
+  internship_id INTEGER NOT NULL,
+  applicant_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  resume_link TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (internship_id)
+    REFERENCES internships(id)
 );

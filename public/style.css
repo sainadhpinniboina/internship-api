@@ -1,0 +1,146 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.header {
+  background: #173b70;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 35px;
+}
+
+h2 {
+  margin-bottom: 18px;
+  color: #173b70;
+}
+
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.internship-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 3px 10px #0000000a;
+}
+
+.internship-card h3 {
+  color: #173b70;
+  margin-bottom: 10px;
+}
+
+.internship-card p {
+  margin-bottom: 6px;
+}
+
+.internship-card button,
+form button {
+  margin-top: 12px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1747b5;
+}
+
+.form-section {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #dbe3ef;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.error {
+  color: #b91c1c;
+  margin-bottom: 12px;
+}
+
+#form-message {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e2e8f0;
+  color: #475569;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 0 14px;
+  }
+
+  .form-section {
+    padding: 18px;
+  }
+}
