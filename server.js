@@ -5,6 +5,13 @@ const rateLimit = require("express-rate-limit");
 const db = require("./database");
 
 const app = express();
+// Request Logging Middleware
+app.use((req, res, next) => {
+    console.log(
+        `${new Date().toISOString()} - ${req.method} ${req.url}`
+    );
+    next();
+});
 const PORT = 3000;
 
 // Security headers
@@ -273,6 +280,14 @@ app.get("/debug-routes", (req, res) => {
     applicationsRouteExists: true,
     message: "Debug endpoint is working"
   });
+});
+// Health Check API
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        status: "OK",
+        message: "Internship API is healthy",
+        timestamp: new Date().toISOString()
+    });
 });
 // Start server
 app.listen(PORT, () => {

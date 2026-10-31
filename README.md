@@ -51,3 +51,37 @@ GET /api/internships?page=1&limit=10
 ## Database
 SQLite stores internship records persistently in internships.db.
 Parameterized SQL queries are used for database operations.
+## Production Readiness
+
+### Health Check
+- Endpoint: GET /health
+- Checks API server availability.
+- Returns server status and timestamp.
+
+### Logging
+- HTTP requests are logged in the server console.
+- Logs include timestamp, request method and URL.
+
+### Security
+- Helmet security headers enabled.
+- Rate limiting enabled.
+- Request body size limited to 10kb.
+- Input validation for application submissions.
+
+### Testing
+- Health check endpoint tested.
+- Internship API GET and POST tested.
+- Application submission tested.
+- Invalid input validation tested.
+
+### Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express.js
+- SQLite
+
+### Project Goal
+A full-stack internship portal that helps users
+explore internships and submit applications.
